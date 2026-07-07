@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/mymart_dev_db}
+    username: ${SPRING_DATASOURCE_USERNAME:root}
+    password: ${SPRING_DATASOURCE_PASSWORD:rootuser}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+     boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+
+        management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    register-with-eureka: true
+    fetch-registry: true
