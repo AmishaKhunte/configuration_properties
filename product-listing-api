@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: products-api
+    name: products-listing-api
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
