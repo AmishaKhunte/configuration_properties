@@ -43,6 +43,11 @@ eureka:
   instance:
     prefer-ip-address: true
 
+razorpay:
+  key:
+    id: rzp_test_Sts4ErOLa4LYpS
+    secret: dTmJ7gqydC4LCIXmbkrrqVJ3
+
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
