@@ -2,24 +2,33 @@ server:
   port: 7071
 
 spring:
+  application:
+    name: admin-api
+
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/mymart_admin_db
     username: root
     password: rootuser
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
-
   boot:
     admin:
       client:
-        url: http://localhost:1111/
+        url: http://localhost:1111
+
+  devtools:
+    restart:
+      log-condition-evaluation-delta: false
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
 
 management:
   endpoints:
@@ -27,16 +36,10 @@ management:
       exposure:
         include: "*"
 
-eureka:
-  instance:
-    prefer-ip-address: true
+  endpoint:
+    health:
+      show-details: always
 
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
-    register-with-eureka: true
-    fetch-registry: true
-
-app:
-  images:
-    upload-dir: C:/Users/amish/Downloads/ecommerce-backend-uploads
+  info:
+    env:
+      enabled: true
