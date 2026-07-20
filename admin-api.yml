@@ -44,6 +44,6 @@ management:
     env:
       enabled: true
 
-  app:
+app:
   images:
-    upload-dir: ${APP_IMAGES_UPLOAD_DIR:C:/Users/amish/Downloads/ecommerce-backend-uploads}    
+    upload-dir: ${APP_IMAGES_UPLOAD_DIR:C:/Users/amish/Downloads/ecommerce-backend-uploads}
