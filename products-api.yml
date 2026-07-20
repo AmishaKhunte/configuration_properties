@@ -36,3 +36,7 @@ eureka:
       defaultZone: http://localhost:8761/eureka
     register-with-eureka: true
     fetch-registry: true
+
+app:
+  images:
+    upload-dir: ${APP_IMAGES_UPLOAD_DIR:C:/Users/amish/Downloads/ecommerce-backend-uploads}
