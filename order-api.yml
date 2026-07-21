@@ -7,7 +7,7 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mymart_user_db
+    url: jdbc:mysql://localhost:3306/mymart_dev_db
     username: root
     password: rootuser
 
