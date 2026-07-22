@@ -16,7 +16,7 @@ spring:
 
           routes:
             - id: admin-api
-              uri: lb:///admin-api
+              uri: lb://admin-api
               predicates:
                 - Path=/api/admin/**
 
