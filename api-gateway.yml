@@ -16,32 +16,32 @@ spring:
 
           routes:
             - id: admin-api
-              uri: lb://ADMIN-API
+              uri: lb:///admin-api
               predicates:
                 - Path=/api/admin/**
 
             - id: user-api
-              uri: lb://USER-API
+              uri: lb://user-api
               predicates:
                 - Path=/api/user/**
 
             - id: order-api
-              uri: lb://ORDER-API
+              uri: lb://order-api
               predicates:
                 - Path=/api/order/**
 
             - id: notifications-api
-              uri: lb://NOTIFICATIONS-API
+              uri: lb://notifications-api
               predicates:
                 - Path=/api/notifications/**
 
             - id: products-listing-api
-              uri: lb://PRODUCTS-LISTING-API
+              uri: lb://products-listing-api
               predicates:
                 - Path=/api/products/**
 
             - id: products-api
-              uri: lb://PRODUCTS-API
+              uri: lb://products-api
               predicates:
                 - Path=/api/products-api/**
 
